@@ -1,0 +1,31 @@
+.page-footer {
+  background-color: @lightgray;
+  min-width: 320px;
+  display: grid;
+  grid-template-rows: min-content min-content min-content min-content;
+  &__contacts {
+    display: grid;
+    grid-template-rows: min-content 362px;
+    grid-template-columns: 1fr 1fr;
+    background-color: @baselight;
+  }
+
+  &__logo {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  &__social {
+    text-align: center;
+    height: 63px;
+    border-top: 1px solid @mediumgray;
+    border-bottom: 1px solid @mediumgray;
+  }
+
+  &__copyright {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}

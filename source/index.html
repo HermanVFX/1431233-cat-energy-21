@@ -3,6 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <title>«Кэт энерджи»</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/normalize.css">
 </head>
 <body class="page__body">
   <header class="page-header">
@@ -10,32 +14,36 @@
       <img class="page-header__logo-image" src="#" width="33.32" height="37.61" alt="Логотип">
     </a>
     <img class="page-header__name-image" src="#" width="33.32" height="37.61" alt="«Кэт энерджи»">
+    <button class="main-nav__toggle" type="button">
+      <span class="visually-hidden">Открыть меню</span>
+    </button>
     <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
-        <ul class="main-nav__list site-list main-nav__wrapper">
+        <ul class="main-nav__list site-list main-nav__wrapper" >
           <li class="site-list__item site-list__item--active"><a href="#">Главная</a></li>
-          <li class="site-list__item"><a href="#">Каталог продукции</a></li>
-          <li class="site-list__item"><a href="#">Подбор программы</a></li>
+          <li class="site-list__item"><a href="catalog.html">Каталог продукции</a></li>
+          <li class="site-list__item"><a href="form.html">Подбор программы</a></li>
         </ul>
     </nav>
   </header>
   <main class="page-main">
     <h1 class="visually-hidden">«Кэт энерджи» - кошачий корм</h1>
     <div class="selection-programm">
-      <h2 class="selection-programm__head">Функциональное питание для котов</h2>
-      <p class="selection-programm__tagline">Занялся собой? Займись котом!</p>
+      <div class="selection-programm__decoration-container">
+        <h2 class="selection-programm__head">Функциональное питание для котов</h2>
+        <p class="selection-programm__tagline">Занялся собой? Займись котом!</p>
+      </div>
       <img class="selection-programm__product-image" height="270" width="280" alt="Изображение товара «Кэт энерджи» - курица">
-      <a class="selection-programm__button">Подобрать программу</a>
+      <a href="form.html" class="selection-programm__button">Подобрать программу</a>
     </div>
     <div class="selection-catalog">
       <div class="selection-catalog__card selection-catalog__slim">
+        <img src="#" class="selection-catalog__icon" height="53" width="50" alt="Похудение иконка">
         <h3 class="selection-catalog__category">Похудение</h3>
         <p class="selection-catalog__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
         <a class="selection-catalog__button">Каталог slim</a>
       </div>
       <div class="selection-catalog__card selection-catalog__pro">
+        <img src="#" class="selection-catalog__icon" height="50" width="67" alt="Набор массы иконка">
         <h3 class="selection-catalog__category">Набор массы</h3>
         <p class="selection-catalog__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
         <a class="selection-catalog__button">Каталог pro</a>
@@ -65,13 +73,15 @@
     <section class="example">
       <h2 class="example__head">Живой пример</h2>
       <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-      <div class="example__mass">
-        <p class="example__text--strong">5 КГ</p>
-        <p class="example__text">снижение веса</p>
-      </div>
-      <div class="example__time">
-        <p class="example__text--strong">60 ДНЕЙ</p>
-        <p class="example__text">затрачено времени</p>
+      <div class="example__position">
+        <div class="example__mass">
+          <p class="example__text--strong">5 КГ</p>
+          <p class="example__text">снижение<br>веса</p>
+        </div>
+        <div class="example__time">
+          <p class="example__text--strong">60 ДНЕЙ</p>
+          <p class="example__text">затрачено времени</p>
+        </div>
       </div>
       <p class="example__price">Затраты на питание: 15 000 РУБ.</p>
       <div class="exemple__slider">
@@ -86,15 +96,17 @@
         </div>
       </div>
     </section>
-    <section class="contacts">
-      <p class="contacts__invitation">Приглашаем к сотрудничеству дилеров!</p>
-      <p class="contacts__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
-      <div class="contacts__map"></div>
-    </section>
   </main>
   <footer class="page-footer">
-    <img class="footer__logo" src="#" alt="Логотип">
-    <div class="footer__social">
+    <section class="page-footer__contacts">
+      <p class="contacts__invitation">Приглашаем к сотрудничеству дилеров!</p>
+      <p class="contacts__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+      <div class="contacts__map">
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A08467e1e66048fcd628e30e6eda4ce932ebcb5e8e1a2a7b0eff847711cffc003&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
+      </div>
+    </section>
+    <img class="page-footer__logo" src="#" alt="Логотип">
+    <div class="page-footer__social">
       <ul class="social__list">
         <li class="social__item">
           <a class="social__link social__link--vkontakte" href="#">Вконтакте</a>
