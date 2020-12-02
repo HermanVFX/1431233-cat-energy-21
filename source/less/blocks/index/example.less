@@ -1,0 +1,50 @@
+.example {
+  background-color: @examplegray;
+  width: 100%;
+  &__head {
+    font-family: Oswald;
+    font-size: 36px;
+    line-height: 40px;
+    margin-left: 10%;
+  }
+  &__description {
+    color: @darkgray;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &__position {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  &__text {
+    text-align: center;
+    width: 87px;
+    background-color: @examplegray;
+    margin-top: -35px;
+    margin-left: 20px;
+    font-size: 12px;
+    line-height: 12px;
+    color: @darkgray;
+    &--strong {
+      border: 1px solid @overgray;
+      border-radius: 3px;
+      width: 124px;
+      height: 41.53px;
+      padding-top: 14.47px;
+      font-family: Oswald;
+      font-size: 24px;
+      line-height: 24px;
+      text-align: center;
+    }
+  }
+
+  &__price {
+    font-family: Oswald;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+  }
+}
