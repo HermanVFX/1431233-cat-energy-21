@@ -11,14 +11,18 @@
 <body class="page__body">
   <header class="page-header">
     <a href="#" class="page-header__logo">
-      <img class="page-header__logo-image" src="#" width="33.32" height="37.61" alt="Логотип">
+      <picture>
+        <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+        <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+        <img class="page-header__logo-image" src="img/logo-mobile.svg" width="33" height="37" alt="Логотип">
+      </picture>
     </a>
-    <img class="page-header__name-image" src="#" width="33.32" height="37.61" alt="«Кэт энерджи»">
-    <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
-        <ul class="main-nav__list site-list main-nav__wrapper">
+    <img class="page-header__name-image" src="img/logo 2.svg" width="101" height="18" alt="«Кэт энерджи»">
+    <button class="main-nav__toggle" type="button">
+      <span class="visually-hidden">Открыть меню</span>
+    </button>
+    <nav class="main-nav main-nav__wrapper main-nav--show">
+        <ul class="main-nav__list site-list" >
           <li class="site-list__item"><a href="index.html">Главная</a></li>
           <li class="site-list__item"><a href="catalog.html">Каталог продукции</a></li>
           <li class="site-list__item site-list__item--active"><a href="#">Подбор программы</a></li>
@@ -27,72 +31,72 @@
   </header>
   <main class="page-main">
     <h1 class="page-main__head">Подбор программы</h1>
-    <p class="page-main__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+    <p class="page-main__head-description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
     <form class="form-programm" action="https://echo.htmlacademy.ru">
-      <fieldset class="form-programm__basic">
-      <label class="basic__label-name basic__label--necessarily">
+      <fieldset class="form-programm__container form-programm__container--basic">
+      <label class="form-programm__label form-programm__label-basic">
         <b>Имя:*</b>
-        <input name="name" class="basic__input-name" type="text">
+        <input name="name" class="form-programm__input form-programm__input-basic" type="text">
       </label>
-      <label class="basic__label-mass basic__label--necessarily">
+      <label class="form-programm__label form-programm__label-basic">
         <b>Вес(кг):*</b>
-        <input name="mass" class="basic__input-mass" type="text">
+        <input name="mass" class="form-programm__input form-programm__input-basic" type="text">
       </label>
-      <label class="basic__label-age">
+      <label class="form-programm__label form-programm__label-basic">
         <b>Возраст(лет):</b>
-        <input name="age" class="basic__input-age" type="text">
+        <input name="age" class="form-programm__input form-programm__input-basic" type="text">
       </label>
     </fieldset>
-    <fieldset class="form-programm__objective">
-      <label class="objective__label-slim">
-        <input name="slim" class="objective__label-slim" type="radio">
+    <fieldset class="form-programm__container form-programm__container--objective">
+      <label class="form-programm__label form-programm__label-objective">
+        <input name="slim" class="form-programm__radio" type="radio">
         <b>Похудение</b>
       </label>
-      <label class="objective__label-strong">
-        <input name="strong" class="objective__label-strong" type="radio">
+      <label class="form-programm__label form-programm__label-objective">
+        <input name="strong" class="form-programm__radio" type="radio">
         <b>Набор массы</b>
       </label>
-      <label class="objective__label-uncertainty">
-        <input name="uncertainty" class="objective__label-uncertainty" type="radio">
+      <label class="form-programm__label form-programm__label-objective">
+        <input name="uncertainty" class="form-programm__radio" type="radio">
         <b>Не знаю (нужен ваш совет)</b>
       </label>
     </fieldset>
-    <fieldset class="form-programm__contacts">
-      <legend class="contacts__legend">Контактные данные (владельца кота)</legend>
-      <label class="contacts__email contacts__email--necessarily">
+    <fieldset class="form-programm__container form-programm__container--contacts">
+      <legend class="form-programm__legend">Контактные данные<br>(владельца кота)</legend>
+      <label class="form-programm__label form-programm__label-contacts">
         <b>E-mail:*</b>
-        <input name="E-mail" class="contacts__email-input" type="text">
+        <input name="E-mail" class="form-programm__input form-programm__input-contacts" type="text">
       </label>
-      <label class="contacts__phone contacts__phone--necessarily">
+      <label class="form-programm__label form-programm__label-contacts">
         <b>Телефон:*</b>
-        <input name="phone" class="contacts__phone-input" type="text">
+        <input name="phone" class="form-programm__input form-programm__input-contacts" type="text">
       </label>
     </fieldset>
-    <fieldset class="form-programm__comments">
-      <legend class="comments__legend">Коментарий</legend>
-      <textarea name="comment" class="comments__input">Расскажите обо всех повадках кота</textarea>
+    <fieldset class="form-programm__container form-programm__container--comments">
+      <legend class="form-programm__legend">Коментарий</legend>
+      <textarea name="comment" class="form-programm__textarea">Расскажите обо всех повадках кота</textarea>
     </fieldset>
-    <fieldset class="form-programm__additionally">
-      <legend class="additionally__legend"></legend>
-      <label class="additionally__label-composition">
-        <input name="sugar" class="additionally__input-composition" type="checkbox">
+    <fieldset class="form-programm__container form-programm__container--additionally">
+      <legend class="form-programm__legend">Дополнительно</legend>
+      <label class="form-programm__label form-programm__label-additionally">
+        <input name="sugar" class="form-programm__checkbox" type="checkbox">
         <b>Сахарозаменитель</b>
       </label>
-      <label class="additionally__label-composition">
-        <input name="water" class="additionally__input-composition" type="checkbox">
+      <label class="form-programm__label form-programm__label-additionally">
+        <input name="water" class="form-programm__checkbox" type="checkbox">
         <b>Питьевая вода</b>
       </label>
-      <label class="additionally__label-composition">
-        <input name="milk" class="additionally__input-composition" type="checkbox">
+      <label class="form-programm__label form-programm__label-additionally">
+        <input name="milk" class="form-programm__checkbox" type="checkbox">
         <b>Молоко</b>
       </label>
-      <label class="additionally__label-composition">
-        <input name="vitamin" class="additionally__input-composition" type="checkbox">
+      <label class="form-programm__label form-programm__label-additionally">
+        <input name="vitamin" class="form-programm__checkbox" type="checkbox">
         <b>Витамины</b>
       </label>
     </fieldset>
     <button class="form-programm__send-button">Отправить заявку</button>
-    <b>*-Обязательные поля</b>
+    <p class="form-programm__aside">*-Обязательные поля</p>
     </form>
   </main>
   <footer class="page-footer">
@@ -100,20 +104,20 @@
       <p class="contacts__invitation">Приглашаем к сотрудничеству дилеров!</p>
       <p class="contacts__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
       <div class="contacts__map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1606411445489!5m2!1sru!2sru" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A08467e1e66048fcd628e30e6eda4ce932ebcb5e8e1a2a7b0eff847711cffc003&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
       </div>
     </section>
-    <img class="page-footer__logo" src="#" alt="Логотип">
+    <img class="page-footer__logo" src="img/footer-logo.svg" width="128px" height="24px" alt="Логотип">
     <div class="page-footer__social">
       <ul class="social__list">
         <li class="social__item">
-          <a class="social__link social__link--vkontakte" href="#">Вконтакте</a>
+          <a class="social__link social__link--vkontakte" href="#"><img src="img/icon_vkontakte.svg" height="16" width="23" alt="Вконтакте"></a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--instagram" href="#">Инстаграмм</a>
+          <a class="social__link social__link--instagram" href="#"><img src="img/icon_instagram.svg" height="16" width="16" alt="Инстаграмм"></a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--facebook" href="#">Фейсбук</a>
+          <a class="social__link social__link--facebook" href="#"><img src="img/icon_facebook.svg" height="22" width="22" alt="Фейсбук"></a>
         </li>
       </ul>
     </div>
@@ -124,5 +128,6 @@
       </a>
     </div>
   </footer>
+  <script src="js/script.js"></script>
 </body>
 </html>

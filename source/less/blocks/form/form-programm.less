@@ -1,0 +1,108 @@
+// Разметка fieldset для формы
+.form-programm {
+  &__container {
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 26px;
+    &--basic {
+      font-family: Oswald;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 18px;
+      color: @darkgray;
+    }
+    &--objective {
+      border-top: 1px solid @mediumgray;
+      border-bottom: 1px solid @mediumgray;
+      font-family: Oswald;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 18px;
+    }
+    &--contacts {
+      .legend();
+      font-family: Oswald;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 18px;
+      color: @darkgray;
+    }
+    &--comments {
+      .legend();
+    }
+    &--additionally {
+      .legend();
+    }
+  }
+  // Стиль легенды fieldset
+  &__legend {
+    font-family: Oswald;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 26px;
+  }
+  // Стили для label
+  &__label {
+    width: 100%;
+    b {
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+  }
+  &__label-basic,
+  &__label-contacts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 45px;
+    margin-bottom: 13px;
+  }
+  &__label-additionally {
+    font-family: Oswald;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+  }
+  // Стили для input
+  &__input {
+    flex-grow: 1;
+    border: 1px solid @gray2;
+    box-sizing: border-box;
+    margin-left: 14px;
+  }
+  &__radio{
+    margin-bottom: 13px;
+  }
+  &__textarea {
+    width: 100%;
+    min-height: 150px;
+    border: 1px solid @gray2;
+    padding: 15px;
+    margin-top: 34px;
+  }
+  &__checkbox {
+    margin-bottom: 13px;
+  }
+  // Кнопка отправки формы
+  &__send-button {
+    display: block;
+    height: 40px;
+    width: 87.5%;
+    background-color: @lightgreen;
+    margin-left: auto;
+    margin-right: auto;
+    color:@baselight;
+
+  }
+  &__aside {
+    text-align: center;
+  }
+}

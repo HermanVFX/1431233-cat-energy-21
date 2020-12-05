@@ -1,28 +1,35 @@
 .page-header {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: min-content 1fr min-content;
   grid-template-rows: min-content min-content;
+  border-bottom: 1px solid @mediumgray;
+  &__logo-image {
+    margin-left: 20px;
+    margin-top: 11px;
+    margin-bottom: 17.3px;
+  }
+  &__name-image {
+    margin: auto;
+  }
 }
 
-.main-nav {
-  grid-row: ~"2 / 3";
-  grid-column: ~"1 / 4";
-  width: 100%;
-
-  margin-bottom: -15px;
-}
-
-.site-list {
-  text-align: center;
-  padding: 0;
-  &__item {
-    border-top: 1px solid @gray;
-    height: 44px;
-    padding-top: 22px;
-    font-family: Oswald;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 20px;
+@media (min-width: @tablet-width) {
+  .page-header {
+    display: flex;
+    &__logo-image {
+      margin-left: 20px;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+    &__name-image {
+      .visually-hidden();
+    }
+    &__logo-image {
+      width: 174px;
+      height: 52px;
+      margin-left: 30px;
+      margin-top: 24px;
+      margin-bottom: 17.3px;
+    }
   }
 }
