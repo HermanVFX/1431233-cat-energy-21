@@ -1,0 +1,19 @@
+.catalog {
+  &__list {
+
+  }
+  &__item {
+    border-bottom: 1px solid @gray3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content min-content min-content;
+    padding-left: 12.5px;
+    padding-right: 12.5px;
+    margin-top: 19px;
+    &--none {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+}
