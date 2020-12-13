@@ -1,8 +1,9 @@
 .page-footer {
   background-color: @lightgray;
   min-width: 320px;
-  display: grid;
-  grid-template-rows: min-content min-content min-content min-content;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   &__contacts {
     display: grid;
     grid-template-rows: min-content 362px;
@@ -11,6 +12,7 @@
   }
 
   &__logo {
+    display: block;
     margin-top: 39px;
     margin-bottom: 32px;
     margin-right: auto;
@@ -29,6 +31,41 @@
     justify-content: space-between;
     margin-left: 20px;
     margin-right: 20px;
+    .arial-font(16px, 18.4px)
   }
 }
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+    &__logo {
+      margin-left: 30px;
+    }
+    &__wrapper {
+      display: flex;
+    }
+    &__social {
+      width: 150px;
+      border: none;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    &__copyright {
+      margin-left: 0;
+      margin-right: 30px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer {
+    &__contacts {
+      display: block;
+      position: relative;
+      grid-template-rows: min-content 362px;
+      grid-template-columns: 1fr 1fr;
+      background-color: @baselight;
+    }
+  }
+}
+
 
