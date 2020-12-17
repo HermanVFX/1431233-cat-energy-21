@@ -1,7 +1,7 @@
 .selection-programm {
   &__decoration-container {
     background-color: @lightgreen;
-    background-blend-mode:soft-light;
+    background-blend-mode: soft-light;
     background-image: url(../img/main-desktop.jpg);
     background-repeat: no-repeat;
     background-position: center;
@@ -9,7 +9,6 @@
     color: @baselight;
     .oswald-font(36px, 36px, 400);
     text-align: center;
-    border-top: 1px solid @gray;
     margin: 0;
     height: 302px;
   }
@@ -19,9 +18,9 @@
     font-weight: normal;
     .oswald-font(36px, 36px, 400);
   }
-  &__tagline{
-  .oswald-font(14px, 14px, 400);
-  text-transform: uppercase;
+  &__tagline {
+    .oswald-font(14px, 14px, 400);
+    text-transform: uppercase;
   }
   &__product-image {
     display: block;
@@ -30,15 +29,99 @@
     margin-right: auto;
   }
   &__button {
-    background-color: @lightgreen ;
+    background-color: @lightgreen;
     color: @baselight;
     display: block;
-    height: 40px;
     margin-left: 20px;
     margin-right: 20px;
     margin-top: 3px;
     text-align: center;
+    height: 27px;
+    padding-top: 13px;
     .oswald-font(14px, 14px, 400);
     text-transform: uppercase;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .selection-programm {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    &__decoration-container {
+      order: -1;
+      background: none;
+      color: @basedark;
+      text-align: left;
+      margin: 0;
+      height: 230px;
+    }
+    &__head {
+      margin-left: 15%;
+      .oswald-font(60px, 60px, 400);
+    }
+    &__tagline {
+      .oswald-font(20px, 20px, 400);
+      margin-left: 15%;
+      margin-top: 41px;
+    }
+    &__product-image {
+      order: 1;
+      display: block;
+      width: 709px;
+      height: auto;
+      margin-top: -84px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    &__button {
+      order: -1;
+      z-index: 1;
+      background-color: @lightgreen;
+      color: @baselight;
+      display: block;
+      height: 40px;
+      width: 242px;
+      padding-top: 14px;
+      margin-left: 15%;
+      text-align: center;
+      .oswald-font(20px, 20px, 400);
+      text-transform: uppercase;
+    }
+  }
+}
+@media (min-width: @desktop-width) {
+  .selection-programm {
+    &__decoration-container {
+      z-index: -1;
+      background-color: @lightgreen;
+      background-blend-mode: soft-light;
+      background-image: url(../img/main-desktop2.jpg);
+      background-repeat: no-repeat;
+      background-size: 100%;
+      margin: -100px 0 0 50%;
+      width: 50%;
+      height: 694px;
+    }
+    &__head {
+      margin-left: -80%;
+      margin-top: 100px;
+      .oswald-font(60px, 60px, 400);
+    }
+    &__tagline {
+      .oswald-font(20px, 20px, 400);
+      margin-left: -80%;
+    }
+    &__product-image {
+      order: 0;
+      width: 552px;
+      margin-top: -600px;
+    }
+    &__button {
+      order: 1;
+      z-index: 1;
+      margin-left: 10%;
+      margin-top: -350px;
+    }
   }
 }

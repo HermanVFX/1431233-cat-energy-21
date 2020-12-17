@@ -29,3 +29,32 @@
     min-height: 365px;
   }
 }
+
+@media (min-width: @desktop-width) {
+  .contacts {
+    width: 100%;
+
+    &__invitation {
+      position: absolute;
+      top: 95px;
+      left: 110px;
+      z-index: 1;
+      width: 285px;
+      height: 201px;
+      background-color: @baselight;
+    }
+
+    &__adress {
+      position: absolute;
+      top: 95px;
+      left: 395px;
+      z-index: 1;
+      width: 285px;
+      height: 201px;
+      background-color: @baselight;
+    }
+
+    &__map {
+    }
+  }
+}
