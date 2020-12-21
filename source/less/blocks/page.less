@@ -19,12 +19,60 @@
   &__head {
     margin-left: 20px;
     margin-right: 20px;
-    .oswald-font(36px, 40px, 400)
+    .oswald-font(36px, 40px, 400);
+    &--form {
+      .oswald-font(56px, 60px, 400);
+    }
   }
   &__head-description {
     margin-left: 20px;
     margin-right: 20px;
+    margin-top: 36px;
+    width: 72%;
     .oswald-font(14px, 18px, 400);
     text-transform: uppercase;
   }
 }
+
+@media (min-width: @tablet-width) {
+  .page-main {
+    &__head {
+      margin-left: 29px;
+      margin-right: 30px;
+      margin-top: 42px;
+      &--form {
+        .oswald-font(60px, 62px, 400);
+      }
+    }
+    &__head-description {
+      margin-left: 70px;
+      margin-right: 30px;
+      margin-top: 55px;
+      width: 50%;
+      .oswald-font(20px, 30px, 400);
+      text-transform: uppercase;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-main {
+    &__head {
+      margin-left: 110px;
+      margin-right: 30px;
+      margin-top: 50px;
+      &--form {
+        .oswald-font(60px, 62px, 400);
+      }
+    }
+    &__head-description {
+      margin-left: 110px;
+      margin-right: 30px;
+      margin-top: 55px;
+      width: 25%;
+      .oswald-font(20px, 30px, 400);
+      text-transform: uppercase;
+    }
+  }
+}
+

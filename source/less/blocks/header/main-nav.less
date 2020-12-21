@@ -12,11 +12,9 @@
     background-image: url(../img/openmenu-mobile.svg);
     background-repeat: no-repeat;
     background-position: center;
-    width: 24px;
-    height: 24px;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-right: 20px;
+    width: 25px;
+    height: 25px;
+    margin: 20px 22px auto auto;
   }
 }
 
@@ -26,9 +24,14 @@
       visibility: visible;
       height: auto;
     }
-
     &__toggle {
       .visually-hidden();
     }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav {
+    margin-top: 30px;
   }
 }

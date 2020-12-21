@@ -1,20 +1,27 @@
 .example {
   background-color: @examplegray;
   width: 100%;
+  margin-top: 35px;
+  padding-top: 31px;
   &__head {
-    .oswald-font(36px, 40px, 400);
-    margin-left: 10%;
+    .oswald-font(38px, 40px, 400);
+    margin-left: 6.5%;
   }
   &__description {
+    .arial-font(15px, 19px);
     color: @darkgray;
-    width: 80%;
+    width: 87%;
+    margin-top: 38px;
     margin-left: auto;
     margin-right: auto;
   }
   &__position {
+    margin-top: -13px;
+    margin-left: 21px;
+    margin-right: 20px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
   }
   &__mass,
   &__time {
@@ -24,37 +31,40 @@
 
   &__text {
     text-align: center;
-    width: 87px;
+    width: 80px;
     background-color: @examplegray;
-    margin-top: -35px;
-    margin-left: 20px;
+    margin-top: -32px;
+    margin-left: 25px;
     font-size: 12px;
     line-height: 12px;
     color: @darkgray;
+    .arial-font(13px, 13px);
     &--strong {
       border: 1px solid @overgray;
       border-radius: 3px;
-      width: 124px;
+      width: 132px;
       height: 41.53px;
       padding-top: 14.47px;
       font-family: Oswald;
-      font-size: 24px;
-      line-height: 24px;
+      font-size: 25px;
+      line-height: 25px;
       text-align: center;
     }
   }
 
   &__price {
-    .oswald-font(14px, 20px, 400);
+    .oswald-font(15px, 20px, 400);
     text-transform: uppercase;
     text-align: center;
     width: 80%;
+    margin-top: 6px;
     margin-left: auto;
     margin-right: auto;
   }
   &__slider {
     background-color: transparent;
     width: 100%;
+    margin-top: 30px;
   }
 }
 

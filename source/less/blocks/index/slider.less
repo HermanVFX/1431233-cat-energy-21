@@ -1,27 +1,33 @@
 .slider {
+  height: 342px;
   &__after-before {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    width: 320px;
+    height: 245px;
   }
   &__bar {
-    .oswald-font(16px, 20px, 400);
+    .oswald-font(17px, 20px, 400);
+    text-transform: uppercase;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
+    margin-top: 22px;
+    margin-left: 58px;
+    margin-right: 54px;
+    margin-bottom: 28px;
   }
   &__bar-all {
-    margin-left: 12px;
-    margin-right: 13px;
-    margin-top: 19px;
-    width: 84px;
+    margin-top: 18px;
+    width: 88px;
     height: 14px;
     background-color: @baselight;
     border: 1px solid #cdcdcd;
     border-radius: 6px;
   }
   &__bar-select {
-    width: 35px;
+    width: 37px;
     height: 6px;
     background-color: @lightgreen;
     border-radius: 6px;

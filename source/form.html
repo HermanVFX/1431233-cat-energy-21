@@ -30,73 +30,84 @@
     </nav>
   </header>
   <main class="page-main">
-    <h1 class="page-main__head">Подбор программы</h1>
+    <h1 class="page-main__head page-main__head--form">Подбор программы</h1>
     <p class="page-main__head-description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
     <form class="form-programm" action="https://echo.htmlacademy.ru">
-      <fieldset class="form-programm__container form-programm__container--basic">
-      <label class="form-programm__label form-programm__label-basic">
-        <b>Имя:*</b>
-        <input name="name" class="form-programm__input form-programm__input-basic" type="text">
-      </label>
-      <label class="form-programm__label form-programm__label-basic">
-        <b>Вес(кг):*</b>
-        <input name="mass" class="form-programm__input form-programm__input-basic" type="text">
-      </label>
-      <label class="form-programm__label form-programm__label-basic">
-        <b>Возраст(лет):</b>
-        <input name="age" class="form-programm__input form-programm__input-basic" type="text">
-      </label>
-    </fieldset>
-    <fieldset class="form-programm__container form-programm__container--objective">
-      <label class="form-programm__label form-programm__label-objective">
-        <input name="slim" class="form-programm__radio" type="radio">
-        <b>Похудение</b>
-      </label>
-      <label class="form-programm__label form-programm__label-objective">
-        <input name="strong" class="form-programm__radio" type="radio">
-        <b>Набор массы</b>
-      </label>
-      <label class="form-programm__label form-programm__label-objective">
-        <input name="uncertainty" class="form-programm__radio" type="radio">
-        <b>Не знаю (нужен ваш совет)</b>
-      </label>
-    </fieldset>
+      <div class="form-programm__wrapper">
+        <fieldset class="form-programm__container form-programm__container--basic">
+          <label class="form-programm__label form-programm__label-basic">
+            <p>Имя:*</p>
+            <input name="name" class="form-programm__input form-programm__input-basic" type="text" placeholder="Барсик">
+          </label>
+          <label class="form-programm__label form-programm__label-basic">
+            <p>Вес (кг):*&nbsp;</p>
+            <input name="mass" class="form-programm__input form-programm__input-basic" type="text" placeholder="7">
+          </label>
+          <label class="form-programm__label form-programm__label-basic">
+            <p>Возраст (лет):</p>
+            <input name="age" class="form-programm__input form-programm__input-basic" type="text" placeholder="7">
+          </label>
+        </fieldset>
+        <fieldset class="form-programm__container form-programm__container--objective">
+          <label class="form-programm__label form-programm__label-objective">
+            <input name="slim" class="form-programm__radio" type="radio" name="programm" value="slim">
+            <span class="form-programm__radio-button"></span>
+            Похудение
+          </label>
+          <label class="form-programm__label form-programm__label-objective">
+            <input name="strong" class="form-programm__radio" type="radio" name="programm" value="strong">
+            <span class="form-programm__radio-button"></span>
+            Набор массы
+          </label>
+          <label class="form-programm__label form-programm__label-objective">
+            <input name="uncertainty" class="form-programm__radio" type="radio" name="programm" value="none">
+            <span class="form-programm__radio-button"></span>
+            Не знаю (нужен ваш совет)
+          </label>
+        </fieldset>
+      </div>
     <fieldset class="form-programm__container form-programm__container--contacts">
-      <legend class="form-programm__legend">Контактные данные<br>(владельца кота)</legend>
+      <legend class="form-programm__legend form-programm__legend--contacts">Контактные данные (владельца кота)</legend>
       <label class="form-programm__label form-programm__label-contacts">
-        <b>E-mail:*</b>
+        <p>E-mail:*</p>
         <input name="E-mail" class="form-programm__input form-programm__input-contacts" type="text">
       </label>
       <label class="form-programm__label form-programm__label-contacts">
-        <b>Телефон:*</b>
+        <p>Телефон:*</p>
         <input name="phone" class="form-programm__input form-programm__input-contacts" type="text">
       </label>
     </fieldset>
     <fieldset class="form-programm__container form-programm__container--comments">
-      <legend class="form-programm__legend">Коментарий</legend>
+      <legend class="form-programm__legend form-programm__legend--comments">Комментарий</legend>
       <textarea name="comment" class="form-programm__textarea">Расскажите обо всех повадках кота</textarea>
     </fieldset>
     <fieldset class="form-programm__container form-programm__container--additionally">
-      <legend class="form-programm__legend">Дополнительно</legend>
+      <legend class="form-programm__legend form-programm__legend--additionally">Дополнительно</legend>
       <label class="form-programm__label form-programm__label-additionally">
-        <input name="sugar" class="form-programm__checkbox" type="checkbox">
-        <b>Сахарозаменитель</b>
+        <input name="sugar" class="form-programm__checkbox-container" type="checkbox">
+        <span class="form-programm__checkbox"></span>
+        Сахарозаменитель
       </label>
       <label class="form-programm__label form-programm__label-additionally">
-        <input name="water" class="form-programm__checkbox" type="checkbox">
-        <b>Питьевая вода</b>
+        <input name="water" class="form-programm__checkbox-container" type="checkbox">
+        <span class="form-programm__checkbox"></span>
+        Питьевая вода
       </label>
       <label class="form-programm__label form-programm__label-additionally">
-        <input name="milk" class="form-programm__checkbox" type="checkbox">
-        <b>Молоко</b>
+        <input name="milk" class="form-programm__checkbox-container" type="checkbox">
+        <span class="form-programm__checkbox"></span>
+        Молоко
       </label>
       <label class="form-programm__label form-programm__label-additionally">
-        <input name="vitamin" class="form-programm__checkbox" type="checkbox">
-        <b>Витамины</b>
+        <input name="vitamin" class="form-programm__checkbox-container" type="checkbox">
+        <span class="form-programm__checkbox"></span>
+        Витамины
       </label>
     </fieldset>
-    <button class="form-programm__send-button">Отправить заявку</button>
-    <p class="form-programm__aside">*-Обязательные поля</p>
+    <div class="form-programm__button-conteiner">
+      <button class="form-programm__send-button">Отправить заявку</button>
+      <p class="form-programm__aside">* &mdash; Обязательные поля</p>
+    </div>
     </form>
   </main>
   <footer class="page-footer">
@@ -107,26 +118,28 @@
         <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A08467e1e66048fcd628e30e6eda4ce932ebcb5e8e1a2a7b0eff847711cffc003&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
       </div>
     </section>
+    <div class="page-footer__wrapper">
     <img class="page-footer__logo" src="img/footer-logo.svg" width="128px" height="24px" alt="Логотип">
     <div class="page-footer__social">
       <ul class="social__list">
-        <li class="social__item">
-          <a class="social__link social__link--vkontakte" href="#"><img src="img/icon_vkontakte.svg" height="16" width="23" alt="Вконтакте"></a>
+        <li class="social__item social__item--vkontakte">
+          <a class="social__link social__link" href="#"><img class="social__image social__image--vkontakte" src="img/icon_vkontakte.svg" height="16" width="23" alt="Вконтакте"></a>
         </li>
-        <li class="social__item">
-          <a class="social__link social__link--instagram" href="#"><img src="img/icon_instagram.svg" height="16" width="16" alt="Инстаграмм"></a>
+        <li class="social__item social__item--instagram">
+          <a class="social__link social__link" href="#"><img class="social__image social__image--instagram" src="img/icon_instagram.svg" height="16" width="16" alt="Инстаграмм"></a>
         </li>
-        <li class="social__item">
-          <a class="social__link social__link--facebook" href="#"><img src="img/icon_facebook.svg" height="22" width="22" alt="Фейсбук"></a>
+        <li class="social__item social__item--facebook">
+          <a class="social__link social__link" href="#"><img class="social__image social__image--facebook" src="img/icon_facebook.svg" height="22" width="22" alt="Фейсбук"></a>
         </li>
       </ul>
     </div>
     <div class="page-footer__copyright copyright">
-      <b class="copyright__text">HTML Academy</b>
+      <p class="copyright__text">HTML Academy</p>
       <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">
-        <img class="copyright__logo-image" src="#" height="34" width="27" alt="Логотип HTML Academy">
+        <img class="copyright__logo-image" src="img/icon-academy.svg" height="34" width="27" alt="Логотип HTML Academy">
       </a>
     </div>
+  </div>
   </footer>
   <script src="js/script.js"></script>
 </body>

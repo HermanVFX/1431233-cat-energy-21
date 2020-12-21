@@ -4,8 +4,11 @@
   &__item {
     border-top: 1px solid @gray;
     height: 44px;
-    padding-top: 22px;
-    .oswald-font(20px, 20px, 500);
+    padding-top: 25.3px;
+    .oswald-font(21px, 20px, 500);
+  }
+  &__item:last-child {
+    margin-bottom: 14px;
   }
 }
 
@@ -29,16 +32,20 @@
         border-bottom: 2px solid @lightgreen;
       }
     }
+    &__item:last-child {
+      margin-bottom: auto;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
   .site-list {
+    margin-right: 25px;
     &__item {
-      color: @baselight;
-      &--active {
-        border-bottom: 2px solid @baselight;
-      }
+      .oswald-font(20px, 22px, 400);
+      margin-left: 35px;
+      height: 32px;
     }
   }
 }
+
