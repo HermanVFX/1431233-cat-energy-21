@@ -8,50 +8,55 @@
     flex-wrap: wrap;
     margin-top: 26px;
     &--basic {
-      font-family: Oswald;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 16px;
-      line-height: 18px;
+      .oswald-font(16px, 20px, 400);
+      text-transform: uppercase;
       color: @darkgray;
+      margin-top: 31.5px;
     }
     &--objective {
       border-top: 1px solid @mediumgray;
       border-bottom: 1px solid @mediumgray;
-      font-family: Oswald;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 16px;
-      line-height: 18px;
+      .oswald-font(16px, 18px, 400);
+      text-transform: uppercase;
+      margin-top: 0;
+      padding-bottom: 28px;
     }
     &--contacts {
       .legend();
-      font-family: Oswald;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 16px;
-      line-height: 18px;
+      .oswald-font(16px, 18px, 400);
       color: @darkgray;
+      margin-top: 7px;
     }
     &--comments {
       .legend();
+      margin-top: 7px;
     }
     &--additionally {
       .legend();
+      margin-top: 18px;
     }
   }
   // Стиль легенды fieldset
   &__legend {
-    font-family: Oswald;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
-    line-height: 26px;
+    .oswald-font(24px, 26px, 400);
+    padding-right: 20px;
+    &--contacts {
+      padding-top: 18px;
+      margin-bottom: 26px;
+    }
+    &--comments {
+      padding-bottom: 6px;
+    }
+    &--additionally {
+      padding-bottom: 6px;
+      margin-bottom: 28px;
+    }
   }
   // Стили для label
   &__label {
     width: 100%;
-    b {
+    margin-top: 1px;
+    p {
       margin-top: auto;
       margin-bottom: auto;
     }
@@ -63,34 +68,85 @@
     justify-content: space-between;
     height: 45px;
     margin-bottom: 13px;
+    text-transform: uppercase;
+  }
+  &__label-contacts {
+    margin-bottom: 12px;
   }
   &__label-additionally {
-    font-family: Oswald;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 18px;
+    text-transform: uppercase;
+    .oswald-font(16px, 18px, 400);
+    margin-bottom: 23px;
+    margin-left: 42px;
   }
   // Стили для input
   &__input {
+    text-transform: uppercase;
     flex-grow: 1;
     border: 1px solid @gray2;
     box-sizing: border-box;
+    margin-top: 2px;
     margin-left: 14px;
+    height: 45px;
+    padding-left: 14px;
+    padding-bottom: 4px;
   }
-  &__radio{
-    margin-bottom: 13px;
+  // Стиль и позиционирование radio-button
+  &__radio {
+    margin-top: 28px;
+    margin-bottom: 10px;
+    margin-right: 41px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+  &__radio:checked + &__radio-button {
+    background-color: @basegreen;
+  }
+  &__radio:hover + &__radio-button {
+    box-shadow: 0 0 0 7px @baselight, 0 0 0 8px #bababa;
+  }
+  &__radio-button {
+    position: absolute;
+    height: 3px;
+    width: 3px;
+    background-color: @baselight;
+    border-radius: 50%;
+    margin-left: -36px;
+    margin-top: 25px;
+    box-shadow: 0 0 0 7px @baselight, 0 0 0 8px @overgray;
+    padding: 5px;
   }
   &__textarea {
+    .oswald-font(16px, 18px, 400);
+    text-transform: uppercase;
     width: 100%;
-    min-height: 150px;
+    min-height: 133px;
     border: 1px solid @gray2;
-    padding: 15px;
-    margin-top: 34px;
+    padding-top: 13px;
+    padding-left: 14px;
+    margin-top: 23px;
+  }
+  &__checkbox-container {
+    margin-bottom: 13px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
   }
   &__checkbox {
-    margin-bottom: 13px;
+    height: 28px;
+    width: 28px;
+    position: absolute;
+    border: 1px solid @overgray;
+    margin-left: -46px;
+    margin-top: -6px;
   }
+  &__checkbox-container:checked + &__checkbox {
+    background-image: url(../img/checked.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
   // Кнопка отправки формы
   &__send-button {
     display: block;
@@ -99,10 +155,338 @@
     background-color: @lightgreen;
     margin-left: auto;
     margin-right: auto;
-    color:@baselight;
-
+    margin-top: 10px;
+    color: @baselight;
+    .oswald-font(16px, 18px, 400);
+    text-transform: uppercase;
   }
   &__aside {
+    margin-top: 19px;
     text-align: center;
+    margin-bottom: 28px;
   }
 }
+
+@media (min-width: @tablet-width) {
+  // Разметка fieldset для формы
+  .form-programm {
+    &__container {
+      padding-left: 70px;
+      padding-right: 68px;
+      margin-top: 56px;
+      &--basic {
+        .oswald-font(20px, 24px, 400);
+      }
+      &--objective {
+        margin-left: 9.4%;
+        margin-right: 8.8%;
+        margin-top: 42px;
+        border: 1px solid @mediumgray;
+      }
+      &--contacts {
+        margin-left: 0;
+        margin-top: 56px;
+      }
+      &--comments {
+        margin-left: 0;
+        margin-top: 44px;
+      }
+      &--additionally {
+        margin-left: 0;
+        margin-top: 54px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+    }
+
+    // Стиль легенды fieldset
+    &__legend {
+      .oswald-font(36px, 40px, 400);
+      padding-right: 40px;
+      padding-left: 38px;
+      margin-left: -50px;
+      &--contacts {
+        padding-bottom: 30px;
+        margin-bottom: 26px;
+        margin-left: -39px;
+      }
+      &--comments {
+        margin-left: -39px;
+        padding-bottom: 6px;
+      }
+      &--additionally {
+        padding-bottom: 8px;
+        margin-bottom: 50px;
+        margin-left: -38px;
+      }
+    }
+    // Стили для label
+    &__label {
+      width: 100%;
+    }
+    &__label-contacts {
+      .oswald-font(20px, 20px, 400);
+      margin-top: 10px;
+      margin-bottom: 18px;
+      margin-left: -5px;
+      margin-right: -4px;
+    }
+    &__label-basic {
+      margin-bottom: 26px;
+    }
+
+    &__label-basic,
+    &__label-contacts {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      height: 45px;
+      text-transform: uppercase;
+    }
+    &__label-additionally {
+      text-transform: uppercase;
+      .oswald-font(20px, 22px, 400);
+      margin-bottom: 49px;
+      margin-left: 54px;
+      width: 36.9%;
+    }
+    &__label-objective {
+      .oswald-font(20px, 22px, 400);
+      margin-top: 10px;
+      margin-bottom: 3px;
+      margin-left: -62px;
+    }
+    // Стили для input
+    &__input {
+      height: 52px;
+      margin-left: 16px;
+      padding-left: 18px;
+    }
+    // Стиль и позиционирование radio-button
+    &__radio:hover + &__radio-button {
+      box-shadow: 0 0 0 9px @baselight, 0 0 0 10px #bababa;
+    }
+    &__radio-button {
+      height: 8px;
+      width: 8px;
+      margin-left: -48px;
+      margin-top: 20px;
+      box-shadow: 0 0 0 9px @baselight, 0 0 0 10px @overgray;
+    }
+    &__textarea {
+      margin-top: 62px;
+      min-height: 156px;
+      padding-left: 18px;
+      padding-top: 14px;
+      .oswald-font(20px, 22px, 400);
+    }
+    &__checkbox-container {
+      margin-bottom: 13px;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+    }
+    &__checkbox {
+      height: 38px;
+      width: 38px;
+      position: absolute;
+      border: 1px solid @overgray;
+      margin-left: -59px;
+      margin-top: -9px;
+    }
+    &__checkbox-container:checked + &__checkbox {
+      background-image: url(../img/checked.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    // Кнопка отправки формы
+    &__send-button {
+      .oswald-font(20px, 22px, 400);
+      width: 36.5%;
+      height: 52px;
+      margin: 6px 0 0 9.4%;
+    }
+    &__aside {
+      .arial-font(16px, 20px);
+      margin-top: 20px;
+      text-align: center;
+      margin-bottom: 28px;
+      margin-right: 22.7%;
+    }
+    &__button-conteiner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form-programm {
+    &__wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    &__container {
+      padding:0;
+      margin-top: 56px;
+
+      &--basic {
+        width: 39.5%;
+        margin-left: 110px;
+        margin-top: 45px;
+      }
+      &--objective {
+        width: 34.5%;
+        margin: 48px 110px 17px 0;
+        padding-left: 70px;
+        padding-top: 7px;
+        padding-bottom: 29px;
+      }
+      &--contacts {
+        margin-left: 0;
+        margin-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-left: 115px;
+        padding-right: 115px;
+      }
+      &--comments {
+        margin-top: 58px;
+      }
+      &--additionally {
+        margin-top: 65px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding-left: 110px;
+      }
+    }
+
+    // Стиль легенды fieldset
+    &__legend {
+      .oswald-font(36px, 40px, 400);
+      padding-right: 40px;
+      padding-left: 38px;
+      margin-left: -50px;
+      &--contacts {
+        padding-bottom: 30px;
+        margin-bottom: 26px;
+        margin-left: -45px;
+      }
+      &--comments {
+        margin-left: 70px;
+      }
+      &--additionally {
+        padding-bottom: 12px;
+        margin-bottom: 50px;
+        margin-left: -40px;
+      }
+    }
+    // Стили для label
+    &__label {
+      width: 100%;
+    }
+    &__label-contacts {
+      width: 47.2%;
+      .oswald-font(20px, 20px, 400);
+      margin-top: 17px;
+      margin-bottom: 18px;
+      margin-left: -5px;
+      margin-right: -4px;
+    }
+    &__label-basic {
+      margin-bottom: 26px;
+    }
+
+    &__label-basic,
+    &__label-contacts {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      height: 45px;
+      text-transform: uppercase;
+    }
+    &__label-additionally {
+      text-transform: uppercase;
+      .oswald-font(20px, 22px, 400);
+      margin-bottom: 49px;
+      margin-left: 44px;
+      margin-right: 12px;
+      width: 20%;
+    }
+    &__label-objective {
+      .oswald-font(20px, 22px, 400);
+      height: min-content;
+      margin-top: auto;
+      margin-bottom: auto;
+      margin-left: -62px;
+    }
+    // Стили для input
+    &__input {
+      height: 52px;
+      margin-left: 16px;
+      padding-left: 18px;
+    }
+    // Стиль и позиционирование radio-button
+    &__radio:hover + &__radio-button {
+      box-shadow: 0 0 0 9px @baselight, 0 0 0 10px #bababa;
+    }
+    &__radio-button {
+      height: 8px;
+      width: 8px;
+      margin-left: -48px;
+      margin-top: 20px;
+      box-shadow: 0 0 0 9px @baselight, 0 0 0 10px @overgray;
+    }
+    &__textarea {
+      margin: 65px 110px 0 110px;
+      min-height: 156px;
+      padding-left: 18px;
+      padding-top: 14px;
+      .oswald-font(20px, 22px, 400);
+    }
+    &__checkbox-container {
+      margin-bottom: 13px;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+    }
+    &__checkbox {
+      height: 38px;
+      width: 38px;
+      position: absolute;
+      border: 1px solid @overgray;
+      margin-left: -59px;
+      margin-top: -9px;
+    }
+    &__checkbox-container:checked + &__checkbox {
+      background-image: url(../img/checked.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    // Кнопка отправки формы
+    &__send-button {
+      .oswald-font(20px, 22px, 400);
+      width: 39.2%;
+      height: 52px;
+      margin: 22px 0 0 7.8%;
+    }
+    &__aside {
+      .arial-font(16px, 20px);
+      margin-top: 39px;
+      text-align: center;
+      margin-bottom: 28px;
+      margin-right: 34.7%;
+    }
+    &__button-conteiner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+}
+
