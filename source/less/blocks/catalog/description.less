@@ -1,0 +1,29 @@
+.description {
+  &__tr {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+  }
+  &__td {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    font-weight: 400;
+    &:last-child {
+      text-align: right;
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .description {
+    &__tr {
+
+    }
+    &__td {
+      border-bottom: 1px solid @overgray;
+      font-weight: 400;
+      &:last-child {
+        text-align: right;
+      }
+    }
+  }
+}

@@ -9,7 +9,7 @@
   margin-top: 39px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 35px;
+  margin-bottom: 32px;
   color: @baselight;
   &__image {
     display: block;
@@ -18,10 +18,60 @@
     margin-right: auto;
   }
   &__text {
-    width: 50%;
+    width: 80%;
+    .arial-font(16px, 20px);
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 48px;
+    margin-top: 50px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .present {
+    width: 92.2%;
+    height: 200px;
+    margin-top: 68px;
+    margin-bottom: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &__image {
+      display: block;
+      padding-top: 58px;
+      margin-left: 79px;
+    }
+    &__text {
+      width: 30%;
+      .arial-font(16px, 20px);
+      text-align: left;
+      margin-left: 192px;
+      margin-top: 72px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .present {
+    width: 245px;
+    height: 289px;
+    margin-top: 0px;
+    margin-bottom: 32px;
+    margin-right: 110px;
+    display: block;
+    &__image {
+      display: block;
+      padding-top: 58px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    &__text {
+      width: 90%;
+      .arial-font(16px, 20px);
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 50px;
+    }
   }
 }
