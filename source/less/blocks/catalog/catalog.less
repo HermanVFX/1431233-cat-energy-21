@@ -1,19 +1,99 @@
 .catalog {
-  &__list {
-
-  }
   &__item {
     border-bottom: 1px solid @gray3;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: min-content min-content min-content;
+    grid-template-rows: 56px 56px min-content;
     padding-left: 12.5px;
     padding-right: 12.5px;
-    margin-top: 19px;
+    &:first-child {
+      border-top: 1px solid @gray3;
+      margin-top: 39px;
+    }
     &--none {
       display: flex;
       flex-wrap: wrap;
+      flex-direction: column;
     }
   }
+}
 
+@media (min-width: @tablet-width) {
+  .catalog {
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      align-items:flex-start;
+      justify-content: space-around;
+
+    }
+    &__item {
+      border:none;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      width: 324px;
+      height: 430px;
+      background-color: @lightgray;
+      padding: 0px;
+      margin-top: 125px;
+      margin-bottom: 16px;
+      margin-right: 30px;
+      margin-left: 30px;
+      &:first-child {
+        border:none;
+        margin-top: 125px;
+      }
+      &--none {
+        background-color: transparent;
+        border: 2px solid @lightgray;
+        width: 320px;
+        height: 426px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog {
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      align-items: flex-start;
+      margin-left: 70px;
+      margin-right: 70px;
+    }
+    &__item {
+      border:none;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      width: 245px;
+      height: 431px;
+      background-color: @lightgray;
+      padding: 0px;
+      margin-top: 125px;
+      margin-bottom: 16px;
+      margin-right: 40px;
+      margin-left: 40px;
+      &:first-child {
+        border:none;
+        margin-top: 125px;
+      }
+      &--none {
+        background-color: transparent;
+        border: 2px solid @lightgray;
+        width: 241px;
+        height: 427px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+      }
+    }
+  }
 }
