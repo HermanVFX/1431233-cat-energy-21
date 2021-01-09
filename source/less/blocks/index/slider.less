@@ -1,11 +1,16 @@
 .slider {
-  height: 342px;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  height: 318px;
   &__after-before {
     display: block;
+    margin-top: -2px;
     margin-left: auto;
     margin-right: auto;
-    width: 320px;
-    height: 245px;
+    width: 311px;
+    height: 232px;
   }
   &__bar {
     .oswald-font(17px, 20px, 400);
@@ -13,21 +18,27 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin-top: 22px;
-    margin-left: 58px;
-    margin-right: 54px;
-    margin-bottom: 28px;
+    margin-top: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
   }
   &__bar-all {
     margin-top: 18px;
-    width: 88px;
+    width: 84px;
     height: 14px;
     background-color: @baselight;
     border: 1px solid #cdcdcd;
     border-radius: 6px;
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+  &__text {
+    width: 70px;
+    text-align: center;
   }
   &__bar-select {
-    width: 37px;
+    width: 35px;
     height: 6px;
     background-color: @lightgreen;
     border-radius: 6px;
@@ -37,7 +48,7 @@
 
 @media (min-width: @tablet-width) {
   .slider {
-    margin-top: 150px;
+    margin-top: 235px;
     width: 100%;
     height: 462px;
     &__wrapper {
@@ -48,14 +59,20 @@
     &__after-before {
       display: block;
       position: absolute;
-      top: -160px;
-      left: 10px;
+      top: -188px;
+      left: 6px;
       width: 708px;
       height: 620px;
+    }
+    &__text {
+      margin: 21px -9px 0 -12px;
     }
     &__bar {
       .oswald-font(20px, 30px, 400);
       padding-top: 380px;
+      margin-top: -38px;
+      margin-left: auto;
+      margin-right: auto;
     }
     &__bar-all {
       margin-left: 24px;
@@ -75,15 +92,15 @@
       background-position: center;
       background-size: auto;
       border-radius: 0;
-      margin: -16px auto 4px auto;
+      margin: -13px 199px 4px auto;
     }
   }
 }
 
 @media (min-width: @desktop-width) {
     .slider {
-    margin:0 0 0 0;
-    width: 100%;
+    margin:0 0 0 50%;
+    width: 700px;
     height: auto;
     &__wrapper {
       margin: 0 150px 0 auto;
@@ -93,16 +110,16 @@
     &__after-before {
       display: block;
       position: absolute;
-      top: -170px;
-      left: 10px;
+      top: -598px;
+      left: -77px;
       width: 690px;
       height: 656px;
+      margin-left: 5.4%;
     }
     &__bar {
       .oswald-font(20px, 30px, 400);
-      margin-top: -430px;
-      margin-left: 500px;
-      width: 700;
+      margin-top: -445px;
+      margin-left: 5.4%;
     }
     &__bar-all {
       margin-left: 24px;

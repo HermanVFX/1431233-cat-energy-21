@@ -3,9 +3,9 @@
   padding: 0;
   &__item {
     border-top: 1px solid @gray;
-    height: 44px;
-    padding-top: 25.3px;
-    .oswald-font(21px, 20px, 500);
+    height: 42px;
+    padding-top: 23px;
+    .oswald-font(20px, 20px, 500);
   }
   &__item:last-child {
     margin-bottom: 14px;
@@ -17,11 +17,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
-    margin-right: 30px;
+    margin-right: 32px;
     &__item {
-      margin-top: 44px;
+      margin-top: 38px;
       margin-left: 34px;
-      .oswald-font(18px, 24px, 400);
+      .oswald-font(18px, 32px, 400);
       border: none;
       padding: 0;
       height: 36px;
@@ -40,11 +40,17 @@
 
 @media (min-width: @desktop-width) {
   .site-list {
-    margin-right: 25px;
+    margin-right: 0px;
     &__item {
       .oswald-font(20px, 22px, 400);
       margin-left: 35px;
       height: 32px;
+      &--active {
+        border-bottom: 2px solid @baselight;
+      }
+    }
+    &__item-index {
+      color: @baselight;
     }
   }
 }
