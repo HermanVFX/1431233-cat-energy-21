@@ -4,29 +4,28 @@
     background-blend-mode: soft-light;
     background-image: url(../img/main-desktop.jpg);
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top;
     background-size: 100%;
     color: @baselight;
-    .oswald-font(36px, 36px, 400);
+    .oswald-font(34px, 36px, 400);
     text-align: center;
-    margin: 0;
-    height: 320px;
+    height: 302px;
   }
   &__head {
     margin-left: auto;
     margin-right: auto;
-    padding-top: 30px;
+    padding-top: 26px;
     font-weight: normal;
-    .oswald-font(38px, 38px, 400);
+    .oswald-font(36px, 38px, 400);
   }
   &__tagline {
-    .oswald-font(15px, 15px, 400);
-    margin-top: 27px;
+    .oswald-font(14px, 15px, 400);
+    margin-top: 22px;
     text-transform: uppercase;
   }
   &__product-image {
     display: block;
-    margin-top: -143px;
+    margin-top: -134px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -34,13 +33,13 @@
     background-color: @lightgreen;
     color: @baselight;
     display: block;
-    margin-left: 21px;
-    margin-right: 21px;
+    margin-left: 20px;
+    margin-right: 20px;
     margin-top: 2px;
     text-align: center;
     height: 29px;
     padding-top: 13px;
-    .oswald-font(15px, 15px, 400);
+    .oswald-font(14px, 15px, 400);
     text-transform: uppercase;
   }
 }
@@ -59,33 +58,33 @@
       height: 230px;
     }
     &__head {
-      margin-left: 15%;
+      margin-left: 15.2%;
+      margin-top: 17px;
       .oswald-font(60px, 60px, 400);
     }
     &__tagline {
       .oswald-font(20px, 20px, 400);
-      margin-left: 15%;
+      margin-left: 15.3%;
       margin-top: 41px;
+      z-index: 1;
+    }
+    &__image-wrapper {
+      z-index: -1;
     }
     &__product-image {
       order: 1;
-      display: block;
       width: 709px;
       height: auto;
       margin-top: -84px;
-      margin-left: auto;
-      margin-right: auto;
     }
     &__button {
       order: -1;
       z-index: 1;
-      background-color: @lightgreen;
-      color: @baselight;
-      display: block;
-      height: 40px;
-      width: 242px;
-      padding-top: 14px;
-      margin-left: 15%;
+      height: 38px;
+      width: 244px;
+      padding-top: 18px;
+      margin-left: 14.6%;
+      margin-top: 42px;
       text-align: center;
       .oswald-font(20px, 20px, 400);
       text-transform: uppercase;
@@ -101,29 +100,31 @@
       background-image: url(../img/main-desktop2.jpg);
       background-repeat: no-repeat;
       background-size: 100%;
-      margin: -100px 0 0 50%;
+      margin: -133px 0 0 50%;
       width: 50%;
       height: 694px;
     }
     &__head {
-      margin-left: -80%;
-      margin-top: 100px;
+      margin-left: -73.6%;
+      margin-top: 198px;
       .oswald-font(60px, 60px, 400);
     }
     &__tagline {
       .oswald-font(20px, 20px, 400);
-      margin-left: -80%;
+      margin-top: 40px;
+      margin-left: -73.6%;
     }
     &__product-image {
       order: 0;
       width: 552px;
-      margin-top: -600px;
+      margin-top: -552px;
+      margin-left: 38.8%;
     }
     &__button {
       order: 1;
       z-index: 1;
-      margin-left: 10%;
-      margin-top: -350px;
+      margin-left: 13.2%;
+      margin-top: -240px;
     }
   }
 }

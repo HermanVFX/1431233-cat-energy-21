@@ -1,8 +1,8 @@
 .selection-catalog {
   &__card {
     background-color: @lightgray;
-    margin: 25px 20px -4px 20px;
-    padding: 20px 20px 7px 20px;
+    margin: 22px 20px -4px 20px;
+    padding: 20px 20px 5px 20px;
     display: grid;
     grid-template-columns: min-content 1fr;
     grid-template-rows: min-content min-content min-content;
@@ -14,57 +14,55 @@
     position: relative;
     width: 70px;
     z-index: 1;
-    margin: 2px auto auto -1px;
+    margin: 0px auto auto -6px;
     &::after {
       content: "";
       z-index: -1;
-      height: 52px;
-      width: 52px;
+      height: 50px;
+      width: 50px;
       border-radius: 50%;
       background-color: @lightgreen;
       position: absolute;
       left: 7px;
-      top: 1px;
+      top: 3px;
     }
     &--strong {
-      margin-top: 6px;
+      margin-top: 2px;
     }
   }
   &__icon-image {
     width: 70px;
     height: 51px;
-    margin-left: -3px;
+    margin-left: -2px;
   }
   &__category {
     grid-row: ~"1 / 2";
     grid-column: ~"2 / 3";
-    .oswald-font(26px, 39px, 400);
+    .oswald-font(24px, 26px, 400);
     text-transform: uppercase;
-    margin-left: 8px;
-    margin-top: 11px;
+    margin-left: 6px;
+    margin-top: 14px;
   }
   &__description {
     grid-row: ~"2 / 3";
     grid-column: ~"1 / 3";
     margin-top: 21px;
-    margin-left: 2px;
-    padding-bottom: 23px;
-    .arial-font(15px, 19px);
+    padding-bottom: 21px;
+    .arial-font(14px, 18px);
     color: @darkgray;
     border-bottom: 1px solid @mediumgray;
   }
   &__button {
     grid-row: ~"3 / 4";
     grid-column: ~"1 / 3";
-    .oswald-font(17px, 17px, 400);
+    .oswald-font(16px, 17px, 400);
     text-transform: uppercase;
-    margin-top: 8px;
-    margin-left: 1px;
+    margin-top: 5px;
     &::after {
       display: block;
       width: min-content;
       position: relative;
-      left: 110px;
+      left: 100px;
       top: -18px;
       content: url(data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%2224%22%20height%3D%2212%22%20viewBox%3D%220%200%2024%2012%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cline%20y1%3D%226%22%20x2%3D%2218%22%20y2%3D%226%22%20stroke%3D%22black%22%20stroke-width%3D%222%22%2F%3E%0A%3Cpath%20d%3D%22M24%206L17.25%2011.1962L17.25%200.803848L24%206Z%22%20fill%3D%22black%22%2F%3E%0A%3C%2Fsvg%3E%0A);
     }
@@ -74,8 +72,10 @@
 @media (min-width: @tablet-width) {
   .selection-catalog {
     &__card {
-      margin-left: 30px;
-      margin-right: 30px;
+      margin-left: 4%;
+      margin-right: 4%;
+      margin-top: 0px;
+      margin-bottom: 30px;
       padding: 0px;
       grid-template-columns: 1fr min-content;
       height: 372px;
@@ -92,13 +92,24 @@
       &::after {
         height: 200px;
         width: 200px;
-        left: 25px;
+        left: 18px;
         top: 10px;
       }
     }
     &__icon-image {
       width: 264px;
       height: 211px;
+      &--slim {
+        height: 192px;
+        width: 140px;
+        margin-left: 46px;
+      }
+      &--pro {
+        margin-top: 54px;
+        margin-left: -16px;
+        height: 112px;
+        width: 268px;
+      }
     }
     &__category {
       grid-row: ~"1 / 2";
@@ -110,20 +121,26 @@
     &__description {
       grid-row: ~"2 / 3";
       grid-column: ~"1 / 2";
+      .arial-font(16px, 24px);
       padding-bottom: 0;
       border: none;
-      margin-left: 53px;
-      width: 377px;
+      margin-left: 52px;
+      margin-top: 26px;
+      width: 376px;
+      min-height: 95px;
+      &--pro {
+        width: 340px;
+      }
     }
     &__button {
       grid-row: ~"3 / 4";
       grid-column: ~"1 / 2";
       .oswald-font(20px, 30px, 400);
-      margin-top: 42px;
-      margin-left: 53px;
+      margin-top: 36px;
+      margin-left: 52px;
       &::after {
-        left: 120px;
-        top: -32px;
+        left: 134px;
+        top: -35px;
       }
     }
   }
@@ -131,19 +148,19 @@
 
 @media (min-width: @desktop-width) {
   .selection-catalog {
-    margin-top: 300px;
+    margin-top: 266px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    margin-left: 0;
-    margin-right: 0;
+    justify-content: space-between;
+    width: 1220px;
+    margin-left: auto;
+    margin-right: auto;
     &__card {
       width: 570px;
-      margin-left: 7.6%;
-
+      margin: 0 0 0 0;
       padding: 0px;
       grid-template-columns: min-content 1fr;
-      height: 372px;
+      min-height: 372px;
     }
     &__icon-conteiner {
       grid-row: ~"1 / 2";
@@ -151,26 +168,39 @@
       position: relative;
       margin-top: 40px;
       margin-right: 0px;
-      margin-left: 30px;
+      margin-left: 0px;
       width: auto;
       height: auto;
       z-index: 1;
       &::after {
         height: 100px;
         width: 100px;
-        left: 25px;
-        top: 10px;
+        left: 54px;
+        top: 8px;
       }
     }
     &__icon-image {
-      width: 135px;
-      height: 106px;
+      &--slim {
+        width: 70px;
+        height: 97px;
+        margin-left: 68px;
+        margin-right: 29px;
+        margin-bottom: 20px;
+      }
+      &--pro {
+        width: 134px;
+        height: 56px;
+        margin-left: 34px;
+        margin-top: 26px;
+        margin-right: 0px;
+        margin-bottom: 36px;
+      }
     }
     &__category {
       grid-row: ~"1 / 2";
       grid-column: ~"2 / 3";
       .oswald-font(36px, 36px, 400);
-      margin-left: 53px;
+      margin-left: 47px;
       margin-top: 77px;
     }
     &__description {
@@ -179,16 +209,17 @@
       padding-bottom: 0;
       border: none;
       margin-left: 53px;
-      width: 377px;
+      margin-bottom: 0px;
+      width: 469px;
     }
     &__button {
       grid-row: ~"3 / 4";
       grid-column: ~"1 / 3";
       .oswald-font(20px, 30px, 400);
-      margin-top: 42px;
-      margin-left: 53px;
+      margin-top: 2px;
+      margin-left: 54px;
       &::after {
-        left: 120px;
+        left: 130px;
         top: -32px;
       }
     }

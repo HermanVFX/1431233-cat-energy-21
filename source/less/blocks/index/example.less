@@ -1,23 +1,23 @@
 .example {
   background-color: @examplegray;
   width: 100%;
-  margin-top: 35px;
-  padding-top: 31px;
+  margin-top: 32px;
+  padding-top: 27px;
   &__head {
-    .oswald-font(38px, 40px, 400);
+    .oswald-font(36px, 40px, 400);
     margin-left: 6.5%;
   }
   &__description {
-    .arial-font(15px, 19px);
+    .arial-font(14px, 18px);
     color: @darkgray;
     width: 87%;
-    margin-top: 38px;
+    margin-top: 33px;
     margin-left: auto;
     margin-right: auto;
   }
   &__position {
-    margin-top: -13px;
-    margin-left: 21px;
+    margin-top: -14px;
+    margin-left: 20px;
     margin-right: 20px;
     display: flex;
     flex-wrap: wrap;
@@ -28,22 +28,21 @@
     display: block;
     width: min-content;
   }
-
   &__text {
     text-align: center;
     width: 80px;
     background-color: @examplegray;
-    margin-top: -32px;
-    margin-left: 25px;
+    margin-top: -34px;
+    margin-left: 21px;
     font-size: 12px;
     line-height: 12px;
     color: @darkgray;
-    .arial-font(13px, 13px);
+    .arial-font(12px, 13px);
     &--strong {
       border: 1px solid @overgray;
       border-radius: 3px;
-      width: 132px;
-      height: 41.53px;
+      width: 122px;
+      height: 40px;
       padding-top: 14.47px;
       font-family: Oswald;
       font-size: 25px;
@@ -51,13 +50,15 @@
       text-align: center;
     }
   }
-
   &__price {
-    .oswald-font(15px, 20px, 400);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .oswald-font(14px, 20px, 400);
     text-transform: uppercase;
     text-align: center;
     width: 80%;
-    margin-top: 6px;
+    margin-top: -9px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -72,58 +73,64 @@
   .example {
     background-color: @baselight;
     border-top: 1px solid @lightgray;
-    width: 100%;
-    margin-top: 47px;
+    margin-top: 10px;
     &__head {
       .oswald-font(60px, 60px, 400);
-      margin-top: 43px;
-      margin-left: 30px;
+      margin-top: 15px;
+      margin-left: 4%;
     }
     &__description {
-      color: @darkgray;
-      width: 710px;
-      margin-left: 30px;
-      margin-top: 63px;
+      width: 90%;
+      margin-left: 4%;
+      margin-top: 65px;
       .arial-font(16px, 24px);
     }
     &__position {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-around;
+      justify-content: space-between;
+      margin-left: 0px;
+      margin-right: 0px;
+      margin-top: 23px;
     }
     &__mass,
     &__time {
       display: block;
       width: min-content;
-      margin-left: 30px;
+      margin-left: 4%;
       margin-right: 0;
     }
-
     &__text {
       width: 142px;
       background-color: @baselight;
-      margin-left: 10px;
+      margin-left: 9px;
+      margin-top: -40px;
       text-align: center;
       font-size: 14px;
       line-height: 14px;
       &--strong {
         border: 1px solid @overgray;
         border-radius: 3px;
-        width: 162px;
+        width: 160px;
         height: 56px;
         padding-top: 15px;
         .oswald-font(30px, 37px, 400);
         text-align: center;
       }
     }
-
     &__price {
-      .oswald-font(20px, 20px, 400);
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      .oswald-font(20px, 10px, 400);
       text-transform: uppercase;
       text-align: center;
-      width: 180px;
+      width: 330px;
       text-align: right;
-      margin: 50px 30px 0 0;
+      margin: 31px 30px 0 0;
+    }
+    &__price-block {
+      margin: 0 0 20px 0;
     }
     &__slider {
       background-color: @lightgray;
@@ -136,38 +143,39 @@
     background-color: @lightgray;
     border-top: none;
     width: 100%;
-    margin-top: 47px;
+    margin-top: 33px;
+    padding-top: 0;
+    padding-bottom: 54px;
     &__head {
       .oswald-font(60px, 60px, 400);
-      width: clac(100% - 110px);
+      width: 92.3%;
       background-color: @baselight;
-      margin-top: 43px;
+      margin-top: 0;
       margin-left: 0;
-      padding-left: 110px;
+      padding-left: 7.7%;
       padding-bottom: 76px;
     }
     &__description {
       color: @darkgray;
-
-      width: 450px;
-      margin-left: 110px;
-      margin-top: 63px;
+      width: 471.0px;
+      margin-left: 7.62%;
+      margin-top: 70px;
       .arial-font(16px, 24px);
     }
     &__position {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      width: 330px;
-      margin-left: 110px;
+      width: 380px;
+      margin-left: 7.6%;
+      margin-top: 38px;
     }
     &__mass,
     &__time {
       display: block;
       width: 100px;
-      margin: 0;
+      margin: 0 76px 0 0;
     }
-
     &__text {
       width: 142px;
       background-color: @lightgray;
@@ -185,14 +193,20 @@
         text-align: center;
       }
     }
-
     &__price {
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      justify-content: space-between;
       .oswald-font(20px, 20px, 400);
       text-transform: uppercase;
       text-align: center;
       width: auto;
       text-align: right;
-      margin: 50px 30px 0 0;
+      margin: 42px 30px 0 0;
+    }
+    &__price-block:first-child {
+      margin-right: 63px;
     }
     &__slider {
       background-color: @lightgray;

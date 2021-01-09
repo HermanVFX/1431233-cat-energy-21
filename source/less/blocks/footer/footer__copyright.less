@@ -1,24 +1,36 @@
 .copyright {
   &__text {
-    .arial-font(16.8px, 18.4px);
-    margin-top: 32px;
-    margin-left: 21px;
+    .arial-font(16px, 18px);
+    margin-top: 28px;
+    margin-left: 19px;
     width: 123px;
   }
   &__logo {
-    margin-top: 25px;
-    margin-right: 22px;
+    margin-top: 20px;
+    margin-right: 20px;
   }
 }
 
 @media (min-width: @tablet-width) {
   .copyright {
     &__text {
-      margin-top: 40px;
+      margin-top: 47px;
+      margin-right: 13px;
       width: 123px;
     }
     &__logo {
       margin-top: 40px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .copyright {
+    &__text {
+      height: min-content;
+    }
+    &__logo {
+      height: min-content;
     }
   }
 }
