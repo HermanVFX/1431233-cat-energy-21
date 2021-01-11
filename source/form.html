@@ -13,18 +13,18 @@
       <picture>
         <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
         <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-        <img class="page-header__logo-image" src="img/logo-mobile.svg" width="33" height="37" alt="Логотип">
+        <img class="page-header__logo-image" src="img/logo-mobile.svg" width="36" height="39" alt="Логотип">
       </picture>
     </a>
-    <img class="page-header__name-image" src="img/logo-second.svg" width="101" height="18" alt="«Кэт энерджи»">
+    <img class="page-header__name-image" src="img/logo-second.svg" width="110" height="18" alt="«Кэт энерджи»">
     <button class="main-nav__toggle" type="button">
       <span class="visually-hidden">Открыть меню</span>
     </button>
     <nav class="main-nav main-nav__wrapper">
-        <ul class="main-nav__list site-list" >
+        <ul class="main-nav__list site-list site-list--index" >
           <li class="site-list__item"><a href="index.html">Главная</a></li>
           <li class="site-list__item"><a href="catalog.html">Каталог продукции</a></li>
-          <li class="site-list__item site-list__item--active"><a href="#">Подбор программы</a></li>
+          <li class="site-list__item site-list__item--active"><a href="form.html">Подбор программы</a></li>
         </ul>
     </nav>
   </header>
@@ -49,7 +49,7 @@
         </fieldset>
         <fieldset class="form-programm__container form-programm__container--objective">
           <label class="form-programm__label form-programm__label-objective">
-            <input name="slim" class="form-programm__radio" type="radio" value="slim">
+            <input name="slim" class="form-programm__radio" type="radio" value="slim" checked>
             <span class="form-programm__radio-button"></span>
             Похудение
           </label>
@@ -69,11 +69,11 @@
       <legend class="form-programm__legend form-programm__legend--contacts">Контактные данные (владельца кота)</legend>
       <label class="form-programm__label form-programm__label-contacts">
         E-mail:*
-        <input name="E-mail" class="form-programm__input form-programm__input-contacts" type="text">
+        <input name="E-mail" class="form-programm__input form-programm__input-contacts" type="text" placeholder="kuklachev@gmail.com">
       </label>
       <label class="form-programm__label form-programm__label-contacts">
         Телефон:*
-        <input name="phone" class="form-programm__input form-programm__input-contacts" type="text">
+        <input name="phone" class="form-programm__input form-programm__input-contacts" type="text" placeholder="8 (960) 900-60-90">
       </label>
     </fieldset>
     <fieldset class="form-programm__container form-programm__container--comments">
@@ -83,7 +83,7 @@
     <fieldset class="form-programm__container form-programm__container--additionally">
       <legend class="form-programm__legend form-programm__legend--additionally">Дополнительно</legend>
       <label class="form-programm__label form-programm__label-additionally">
-        <input name="sugar" class="form-programm__checkbox-container" type="checkbox">
+        <input name="sugar" class="form-programm__checkbox-container" type="checkbox" checked>
         <span class="form-programm__checkbox"></span>
         Сахарозаменитель
       </label>
@@ -111,8 +111,10 @@
   </main>
   <footer class="page-footer">
     <div class="page-footer__contacts">
-      <p class="contacts__invitation">Приглашаем<br>к сотрудничеству<br>дилеров!</p>
-      <p class="contacts__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+      <div class="contacts__adress-container">
+        <p class="contacts__invitation">Приглашаем<br>к сотрудничеству<br>дилеров!</p>
+        <p class="contacts__adress">ул. Большая <br class="contacts__adress-br">Конюшенная, д. 19/8<br><br class="contacts__adress-br">Санкт-Петербург</p>
+      </div>
       <div class="contacts__map">
         <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A08467e1e66048fcd628e30e6eda4ce932ebcb5e8e1a2a7b0eff847711cffc003&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
       </div>

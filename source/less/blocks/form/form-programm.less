@@ -11,15 +11,15 @@
       .oswald-font(16px, 20px, 400);
       text-transform: uppercase;
       color: @darkgray;
-      margin-top: 31.5px;
+      margin-top: 46px;
     }
     &--objective {
       border-top: 1px solid @mediumgray;
       border-bottom: 1px solid @mediumgray;
       .oswald-font(16px, 18px, 400);
       text-transform: uppercase;
-      margin-top: 0;
-      padding-bottom: 28px;
+      margin-top: -11px;
+      padding-bottom: 19px;
     }
     &--contacts {
       .legend();
@@ -29,11 +29,11 @@
     }
     &--comments {
       .legend();
-      margin-top: 7px;
+      margin-top: -6px;
     }
     &--additionally {
       .legend();
-      margin-top: 18px;
+      margin-top: 15px;
     }
   }
   // Стиль легенды fieldset
@@ -42,7 +42,8 @@
     padding-right: 20px;
     &--contacts {
       padding-top: 18px;
-      margin-bottom: 26px;
+      margin-bottom: 36px;
+      width: 72%;
     }
     &--comments {
       padding-bottom: 6px;
@@ -55,11 +56,17 @@
   // Стили для label
   &__label {
     width: 100%;
-    margin-top: 1px;
+    margin-top: 0px;
     p {
       margin-top: auto;
       margin-bottom: auto;
     }
+  }
+  &__label-contacts {
+    margin-top: 1px;
+  }
+  &__label-basic {
+    margin-bottom: 13px;
   }
   &__label-basic,
   &__label-contacts {
@@ -67,16 +74,20 @@
     flex-wrap: wrap;
     justify-content: space-between;
     height: 45px;
-    margin-bottom: 13px;
+
     text-transform: uppercase;
   }
+  &__label-objective {
+    margin-bottom: 4.2px;
+  }
   &__label-contacts {
-    margin-bottom: 12px;
+    margin-top: 4px;
+    margin-bottom: 10px;
   }
   &__label-additionally {
     text-transform: uppercase;
     .oswald-font(16px, 18px, 400);
-    margin-bottom: 23px;
+    margin-bottom: 25px;
     margin-left: 42px;
   }
   // Стили для input
@@ -85,11 +96,15 @@
     flex-grow: 1;
     border: 1px solid @gray2;
     box-sizing: border-box;
-    margin-top: 2px;
+    margin-top: -12px;
     margin-left: 14px;
     height: 45px;
     padding-left: 14px;
     padding-bottom: 4px;
+  }
+  &__input-contacts {
+    margin-top: -9px;
+    margin-left: 10px;
   }
   // Стиль и позиционирование radio-button
   &__radio {
@@ -121,11 +136,11 @@
     .oswald-font(16px, 18px, 400);
     text-transform: uppercase;
     width: 100%;
-    min-height: 133px;
+    min-height: 137px;
     border: 1px solid @gray2;
-    padding-top: 13px;
+    padding-top: 10px;
     padding-left: 14px;
-    margin-top: 23px;
+    margin-top: 26px;
   }
   &__checkbox-container {
     margin-bottom: 13px;
@@ -139,14 +154,13 @@
     position: absolute;
     border: 1px solid @overgray;
     margin-left: -46px;
-    margin-top: -6px;
+    margin-top: -7px;
   }
   &__checkbox-container:checked + &__checkbox {
     background-image: url(../img/checked.svg);
     background-repeat: no-repeat;
     background-position: center;
   }
-
   // Кнопка отправки формы
   &__send-button {
     display: block;
@@ -155,7 +169,7 @@
     background-color: @lightgreen;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 10px;
+    margin-top: 5px;
     color: @baselight;
     .oswald-font(16px, 18px, 400);
     text-transform: uppercase;
@@ -163,7 +177,7 @@
   &__aside {
     margin-top: 19px;
     text-align: center;
-    margin-bottom: 28px;
+    margin-bottom: 31px;
   }
 }
 
@@ -171,17 +185,20 @@
   // Разметка fieldset для формы
   .form-programm {
     &__container {
-      padding-left: 70px;
+      padding-left: 71px;
       padding-right: 68px;
       margin-top: 56px;
       &--basic {
         .oswald-font(20px, 24px, 400);
+        margin-top: 72px;
+
       }
       &--objective {
         margin-left: 9.4%;
         margin-right: 8.8%;
-        margin-top: 42px;
+        margin-top: 28px;
         border: 1px solid @mediumgray;
+        padding-bottom: 30px;
       }
       &--contacts {
         margin-left: 0;
@@ -189,7 +206,7 @@
       }
       &--comments {
         margin-left: 0;
-        margin-top: 44px;
+        margin-top: 26px;
       }
       &--additionally {
         margin-left: 0;
@@ -207,9 +224,10 @@
       padding-left: 38px;
       margin-left: -50px;
       &--contacts {
-        padding-bottom: 30px;
-        margin-bottom: 26px;
+        padding-bottom: 28px;
+        margin-bottom: 45px;
         margin-left: -39px;
+        width: 94%;
       }
       &--comments {
         margin-left: -39px;
@@ -262,6 +280,9 @@
       height: 52px;
       margin-left: 16px;
       padding-left: 18px;
+    }
+    &__input-contacts {
+      margin-top: -15px;
     }
     // Стиль и позиционирование radio-button
     &__radio:hover + &__radio-button {
@@ -318,6 +339,7 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+      margin-bottom: 64px;
     }
   }
 }
@@ -331,23 +353,23 @@
     }
     &__container {
       padding:0;
-      margin-top: 56px;
+      margin-top: 54px;
 
       &--basic {
         width: 39.5%;
         margin-left: 110px;
-        margin-top: 45px;
+        margin-top: 58px;
       }
       &--objective {
         width: 34.5%;
-        margin: 48px 110px 17px 0;
+        margin: 42px 110px 29px 0;
         padding-left: 70px;
-        padding-top: 7px;
-        padding-bottom: 29px;
+        padding-top: 8px;
+        padding-bottom: 26px;
       }
       &--contacts {
         margin-left: 0;
-        margin-top: 30px;
+        margin-top: 20px;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -355,14 +377,15 @@
         padding-right: 115px;
       }
       &--comments {
-        margin-top: 58px;
+        margin-top: 39px;
       }
       &--additionally {
-        margin-top: 65px;
+        margin-top: 66px;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
-        padding-left: 110px;
+        padding-left: 136px;
+        padding-right: 10px;
       }
     }
 
@@ -374,8 +397,9 @@
       margin-left: -50px;
       &--contacts {
         padding-bottom: 30px;
-        margin-bottom: 26px;
+        margin-bottom: 42px;
         margin-left: -45px;
+        width: 590px;
       }
       &--comments {
         margin-left: 70px;
@@ -383,7 +407,7 @@
       &--additionally {
         padding-bottom: 12px;
         margin-bottom: 50px;
-        margin-left: -40px;
+        margin-left: -65px;
       }
     }
     // Стили для label
@@ -413,9 +437,10 @@
     &__label-additionally {
       text-transform: uppercase;
       .oswald-font(20px, 22px, 400);
-      margin-bottom: 49px;
-      margin-left: 44px;
-      margin-right: 12px;
+      margin-bottom: 50px;
+      margin-top: 4px;
+      margin-left: 0px;
+      margin-right: 0px;
       width: 20%;
     }
     &__label-objective {
@@ -473,13 +498,13 @@
       .oswald-font(20px, 22px, 400);
       width: 39.2%;
       height: 52px;
-      margin: 22px 0 0 7.8%;
+      margin: 20px 0 0 7.8%;
     }
     &__aside {
       .arial-font(16px, 20px);
-      margin-top: 39px;
+      margin-top: 36px;
       text-align: center;
-      margin-bottom: 28px;
+      margin-bottom: 32px;
       margin-right: 34.7%;
     }
     &__button-conteiner {
