@@ -2,7 +2,10 @@
   &__decoration-container {
     background-color: @lightgreen;
     background-blend-mode: soft-light;
-    background-image: url(../img/main-desktop.jpg);
+    background-image: url(../img/main-mobile.jpg);
+    @media (min-resolution: 2dppx) {
+      background-image: url(../img/main-mobile-x2.jpg);
+    }
     background-repeat: no-repeat;
     background-position: top;
     background-size: 100%;
@@ -38,9 +41,15 @@
     margin-top: 2px;
     text-align: center;
     height: 29px;
-    padding-top: 13px;
+    padding: 1px 0 12px 0;
     .oswald-font(14px, 15px, 400);
     text-transform: uppercase;
+    &:hover {
+      background-color: @basegreen;
+    }
+    &:active p{
+      opacity: 0.3;
+    }
   }
 }
 
@@ -82,7 +91,7 @@
       z-index: 1;
       height: 38px;
       width: 244px;
-      padding-top: 18px;
+      padding: 0 0 17px 0;
       margin-left: 14.6%;
       margin-top: 42px;
       text-align: center;
@@ -97,7 +106,10 @@
       z-index: -1;
       background-color: @lightgreen;
       background-blend-mode: soft-light;
-      background-image: url(../img/main-desktop2.jpg);
+      background-image: url(../img/main-desktop.jpg);
+      @media (min-resolution: 2dppx) {
+        background-image: url(../img/main-desktop-x2.jpg);
+      }
       background-repeat: no-repeat;
       background-size: 100%;
       margin: -133px 0 0 50%;

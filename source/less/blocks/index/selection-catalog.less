@@ -58,6 +58,7 @@
     .oswald-font(16px, 17px, 400);
     text-transform: uppercase;
     margin-top: 5px;
+    width: 150px;
     &::after {
       display: block;
       width: min-content;
@@ -65,6 +66,9 @@
       left: 100px;
       top: -18px;
       content: url(data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%2224%22%20height%3D%2212%22%20viewBox%3D%220%200%2024%2012%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cline%20y1%3D%226%22%20x2%3D%2218%22%20y2%3D%226%22%20stroke%3D%22black%22%20stroke-width%3D%222%22%2F%3E%0A%3Cpath%20d%3D%22M24%206L17.25%2011.1962L17.25%200.803848L24%206Z%22%20fill%3D%22black%22%2F%3E%0A%3C%2Fsvg%3E%0A);
+    }
+    &:active {
+      opacity: 0.3;
     }
   }
 }
@@ -136,11 +140,15 @@
       grid-row: ~"3 / 4";
       grid-column: ~"1 / 2";
       .oswald-font(20px, 30px, 400);
+      width: 200px;
       margin-top: 36px;
       margin-left: 52px;
       &::after {
         left: 134px;
         top: -35px;
+      }
+      &:active {
+        opacity: 0.3;
       }
     }
   }
@@ -221,6 +229,9 @@
       &::after {
         left: 130px;
         top: -32px;
+      }
+      &:active {
+        opacity: 0.3;
       }
     }
   }
