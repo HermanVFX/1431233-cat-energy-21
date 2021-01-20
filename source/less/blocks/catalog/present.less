@@ -1,6 +1,9 @@
 .present {
   background-color: @lightgreen;
   background-image: url(../img/gift.jpg);
+  @media (min-resolution: 2dppx) {
+    background-image: url(../img/gift-x2.jpg);
+  }
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
@@ -9,7 +12,7 @@
   margin-top: 39px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 34px;
+  margin-bottom: 36px;
   color: @baselight;
   &__image {
     display: block;
@@ -29,6 +32,11 @@
 
 @media (min-width: @tablet-width) {
   .present {
+    background-image: url(../img/gift-tablet-x1.jpg);
+    background-size: cover;
+    @media (min-resolution: 2dppx) {
+      background-image: url(../img/gift-tablet-x2.jpg);
+    }
     width: 92.2%;
     height: 200px;
     margin-top: 68px;
@@ -53,6 +61,10 @@
 
 @media (min-width: @desktop-width) {
   .present {
+    background-image: url(../img/gift.jpg);
+    @media (min-resolution: 2dppx) {
+      background-image: url(../img/gift-x2.jpg);
+    }
     width: 245px;
     height: 289px;
     margin-top: 0px;

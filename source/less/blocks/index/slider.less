@@ -36,6 +36,7 @@
   &__text {
     width: 70px;
     text-align: center;
+    border-bottom: none;
   }
   &__bar-select {
     width: 35px;
@@ -63,9 +64,20 @@
       left: 6px;
       width: 708px;
       height: 620px;
+      z-index: 0;
     }
     &__text {
       margin: 21px -9px 0 -12px;
+      border-bottom: 1px dotted @darkgray;
+      width: min-content;
+      z-index: 1;
+      cursor: pointer;
+      &:hover {
+        border-bottom: 1px solid @darkgray;
+      }
+      &:active {
+        border-bottom: none;
+      }
     }
     &__bar {
       .oswald-font(20px, 30px, 400);
@@ -73,6 +85,7 @@
       margin-top: -38px;
       margin-left: auto;
       margin-right: auto;
+      z-index: 1;
     }
     &__bar-all {
       margin-left: 24px;
@@ -85,14 +98,19 @@
       border-radius: 6px;
     }
     &__bar-select {
-      width: 34px;
-      height: 36px;
+      cursor: pointer;
+      width: 38px;
+      height: 40px;
       background-color: transparent;
       background-image: url(../img/slider-control.svg);
       background-position: center;
       background-size: auto;
       border-radius: 0;
-      margin: -13px 199px 4px auto;
+      margin: -13px 195px 4px auto;
+      &:active {
+        background-image: url(../img/slider-control--pressed.svg);
+        margin: -11px 195px 4px auto;
+      }
     }
   }
 }

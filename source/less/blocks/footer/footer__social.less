@@ -17,6 +17,18 @@
       margin: -4px 0 0 0;
     }
   }
+  &__image {
+    &:hover .social__icon-path{
+      fill: @lightgreen;
+      &--facebook {
+        fill: none;
+        stroke: @lightgreen;
+      }
+    }
+    &:active .social__icon-path{
+      opacity: 0.3;
+    }
+  }
 }
 
 @media (min-width: @tablet-width) {
