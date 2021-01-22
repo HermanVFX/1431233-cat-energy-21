@@ -3,8 +3,7 @@
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src:
-    url("../fonts/oswaldmedium.woff") format("woff"),
+  src: url("../fonts/oswaldmedium.woff") format("woff"),
     url("../fonts/oswaldmedium.woff2") format("woff2");
 }
 
@@ -13,14 +12,12 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src:
-    url("../fonts/oswaldregular.woff") format("woff"),
+  src: url("../fonts/oswaldregular.woff") format("woff"),
     url("../fonts/oswaldregular.woff2") format("woff2");
 }
 
-
 .oswald-font(@size, @height, @weight) {
-  font-family: Oswald;
+  font-family: Oswald , "Tahoma", sans-serif;
   font-style: normal;
   font-weight: @weight;
   font-size: @size;
@@ -34,4 +31,3 @@
   font-size: @size;
   line-height: @height;
 }
-

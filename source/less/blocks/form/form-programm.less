@@ -225,6 +225,12 @@
     color: @baselight;
     .oswald-font(16px, 18px, 400);
     text-transform: uppercase;
+    &:hover {
+      background-color: @basegreen;
+    }
+    &:active {
+      color: @opacitylight;
+    }
   }
   &__aside {
     margin-top: 19px;
@@ -243,7 +249,6 @@
       &--basic {
         .oswald-font(20px, 24px, 400);
         margin-top: 72px;
-
       }
       &--objective {
         margin-left: 9.4%;
@@ -416,7 +421,7 @@
       justify-content: space-between;
     }
     &__container {
-      padding:0;
+      padding: 0;
       margin-top: 54px;
 
       &--basic {
@@ -590,4 +595,3 @@
     }
   }
 }
-
