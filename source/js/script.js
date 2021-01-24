@@ -1,7 +1,7 @@
-var openMenu = document.querySelector(".main-nav__toggle");
+var openMenu = document.querySelector(".main-nav-toggle");
 var blockMenu = document.querySelector(".main-nav");
 
-let menuShow = false;
+let menuShow = true;
 
 openMenu.addEventListener("click", function(evt) {
   blockMenu.classList.toggle("main-nav--show");

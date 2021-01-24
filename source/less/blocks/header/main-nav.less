@@ -7,15 +7,15 @@
     visibility: hidden;
     height: 0;
   }
+}
 
-  &__toggle {
-    background-image: url(../img/closemenu-mobile.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 25px;
-    height: 25px;
-    margin: 18px 20px auto auto;
-  }
+.main-nav-toggle {
+  background-image: url(../img/openmenu-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 25px;
+  height: 25px;
+  margin: 18px 20px auto auto;
 }
 
 @media (min-width: @tablet-width) {
@@ -24,9 +24,9 @@
       visibility: visible;
       height: auto;
     }
-    &__toggle {
-      .visually-hidden();
-    }
+  }
+  .main-nav-toggle {
+    .visually-hidden();
   }
 }
 

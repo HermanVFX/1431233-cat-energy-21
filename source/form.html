@@ -4,10 +4,11 @@
   <meta charset="UTF-8">
   <title>«Кэт энерджи»</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin>
 </head>
-<body class="page__body">
+<body class="page-body">
   <header class="page-header">
     <a href="index.html" class="page-header__logo">
       <picture>
@@ -17,10 +18,10 @@
       </picture>
     </a>
     <img class="page-header__name-image" src="img/logo-second.svg" width="110" height="18" alt="«Кэт энерджи»">
-    <button class="main-nav__toggle" type="button">
+    <button class="main-nav-toggle" type="button">
       <span class="visually-hidden">Открыть меню</span>
     </button>
-    <nav class="main-nav main-nav__wrapper">
+    <nav class="main-nav main-nav__wrapper main-nav--show">
         <ul class="main-nav__list site-list site-list--index" >
           <li class="site-list__item"><a href="index.html">Главная</a></li>
           <li class="site-list__item"><a href="catalog.html">Каталог продукции</a></li>
@@ -49,17 +50,17 @@
         </fieldset>
         <fieldset class="form-programm__container form-programm__container--objective">
           <label class="form-programm__label form-programm__label-objective">
-            <input name="slim" class="form-programm__radio" type="radio" value="slim" checked>
+            <input name="radio" class="form-programm__radio" type="radio" value="slim" checked>
             <span class="form-programm__radio-button"></span>
             Похудение
           </label>
           <label class="form-programm__label form-programm__label-objective">
-            <input name="strong" class="form-programm__radio" type="radio" value="strong">
+            <input name="radio" class="form-programm__radio" type="radio" value="strong">
             <span class="form-programm__radio-button"></span>
             Набор массы
           </label>
           <label class="form-programm__label form-programm__label-objective">
-            <input name="uncertainty" class="form-programm__radio" type="radio" value="none">
+            <input name="radio" class="form-programm__radio" type="radio" value="none">
             <span class="form-programm__radio-button"></span>
             Не знаю (нужен ваш совет)
           </label>
@@ -73,7 +74,7 @@
       </label>
       <label class="form-programm__label form-programm__label-contacts form-programm__label-contacts--phone">
         Телефон:*
-        <input name="phone" class="form-programm__input form-programm__input-contacts" type="text" placeholder="8 (960) 900-60-90">
+        <input name="phone" class="form-programm__input form-programm__input-contacts" type="tel" placeholder="8 (960) 900-60-90">
       </label>
     </fieldset>
     <fieldset class="form-programm__container form-programm__container--comments">
@@ -110,10 +111,10 @@
     </form>
   </main>
   <footer class="page-footer">
-    <div class="page-footer__contacts">
+    <div class="page-footer__contacts contacts">
       <div class="contacts__adress-container">
         <p class="contacts__invitation">Приглашаем<br>к сотрудничеству<br>дилеров!</p>
-        <p class="contacts__adress">ул. Большая <br class="contacts__adress-br">Конюшенная, д. 19/8<br><br class="contacts__adress-br">Санкт-Петербург</p>
+        <p class="contacts__adress">ул. Большая <br>Конюшенная, д. 19/8<br><br class="contacts__adress-br">Санкт-Петербург</p>
       </div>
       <div class="contacts__map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003183!2d30.320858716211156!3d59.938719169054046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1610521474582!5m2!1sru!2sru" width="320" height="362" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
@@ -123,7 +124,7 @@
       <a class="page-footer__logo" href="index.html">
         <img src="img/footer-logo.svg" width="128" height="24" alt="Логотип">
       </a>
-    <div class="page-footer__social">
+    <div class="page-footer__social social">
       <ul class="social__list">
         <li class="social__item social__item--vkontakte">
           <a class="social__link social__link--vkontakte" href="#">
@@ -158,6 +159,6 @@
     </a>
   </div>
   </footer>
-  <script src="js/script.js"></script>
+  <script src="js/script.min.js"></script>
 </body>
 </html>
